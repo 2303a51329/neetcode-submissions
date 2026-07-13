@@ -1,0 +1,20 @@
+class Solution(object):
+    def maxArea(self, height):
+        l=0
+        r=len(height)-1
+        max_cap=0
+        while l<r:
+            cap=min(height[l],height[r]) * (r-l) 
+            max_cap=max(max_cap,cap)
+            if height[l]<height[r]:
+                l+=1
+            else:
+                r-=1
+        return max_cap
+
+                    
+
+                
+
+
+        
